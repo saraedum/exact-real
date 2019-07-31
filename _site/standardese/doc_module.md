@@ -6,7 +6,7 @@ namespace exactreal
     template <typename Ring>
     class Module;
      
-    //=== Other Mains of Constructing Modules ===//
+    //=== Other Means of Constructing Modules ===//
     template <typename Ring>
     std::shared_ptr<const Module<Ring>> operator+(std::shared_ptr<const Module<Ring>>&, std::shared_ptr<const Module<Ring>>&);
 }
@@ -127,7 +127,7 @@ Through [boost operators](https://www.boost.org/doc/libs/1_70_0/libs/utility/ope
 
 -----
 
-### Other Mains of Constructing Modules
+### Other Means of Constructing Modules
 
 ``` cpp
 template <typename Ring>
