@@ -1,0 +1,76 @@
+---
+# The main Sass file needs front matter (the dashes are enough)
+---
+
+@import "minima";
+
+/* We are not a blog, so let's use some more space */
+.wrapper {
+  max-width: calc(960px - (2 * 15px));
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Minmia adds a black line at the top; imho it looks weird so let's drop it. */
+.site-header {
+  border-top: 0;
+}
+
+/* Properly break long lines in source code */
+pre code {
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+/* Shrink source code to make things more compact */
+.highlighter-rouge {
+  font-size: 12px;
+
+  & code, pre {
+    font-size: inherit;
+  }
+
+  &.language-c\+\+ {
+    font-size: 10px;
+  }
+}
+
+/* Allow for reordings and other flex foo */
+.post-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Do not repeat header file name twice (it's already in the title) and do not
+ * display header contents verbatim here. */
+[id^="header-file-"]:not(.post-title) {
+  display: none;
+
+  & + .language-cpp {
+    display: none;
+  } 
+
+  /* Lift the class description above the class code block */
+  & ~ [id^="class-"] {
+    order: -2;
+
+    & + * + p {
+      order: -1;
+    }
+  }
+
+  /* Hide <hr> inside the same class */
+  & ~ hr {
+    display: none;
+
+    & + hr {
+      display: initial;
+    }
+  }
+}
+
+/* Hide mostly redundant "Function" headers */
+h3[id^="function-"] {
+  display: none;
+}
+
