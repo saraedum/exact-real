@@ -5,6 +5,10 @@
 [![codecov](https://codecov.io/gh/flatsurf/exact-real/branch/master/graph/badge.svg)](https://codecov.io/gh/flatsurf/exact-real)
 [![asv](http://img.shields.io/badge/benchmarked%20by-asv-blue.svg?style=flat)](https://flatsurf.github.io/exact-real-asv/)
 
+## Exact Computations with Submodules of the Reals
+
+[exact-real](https://github.com/flatsurf/exact-real) is a collection of libraries to work with finite submodules of ℝ. Our main motivation are *exact* computations with transcendental real numbers. Arithmetic is always exact and usually performed symbolically. Comparisons are implemented by generating more and more digits of the real numbers which are fed into fast ball arithmetic. All operations come with guarantees that they will eventually terminate. Currently, we model random transcendental real numbers given by random sequences of digits. The library can be easily extended to other classes of reals.
+
 ## Current Release Info
 
 We build and release this package with every push to the master branch. These releases are considered unstable and highly
@@ -12,8 +16,8 @@ experimental. There are no stable releases yet.
 
 This repository contains two related projects:
 
-* **libexactreal** a C++ library
-* **pyexactreal** a Python wrapper for **libexactreal**
+* **libexactreal** a C++ library ([online documentation](https://flatsurf.github.io/exact-real/libexactreal))
+* **pyexactreal** a Python wrapper for **libexactreal** ([online documentation](https://flatsurf.github.io/exact-real/pyexactreal))
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
